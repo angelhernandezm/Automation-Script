@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AutomationScript.Engine" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="AutomationScript.Engine.GenericDelegate&lt;T, V&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_DelegatesAndEvents.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="AutomationScript.Engine.AutomationDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_DelegatesAndEvents.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Enum Name="AutomationScript.Engine.BehaviorType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_ExternAndMembers.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="AutomationScript.Engine.StepAction" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_ExternAndMembers.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Delegate Name="AutomationScript.Engine.SendAsyncProc" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_DelegatesAndEvents.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Class Name="AutomationScript.Engine.For" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_StructsAndSupportClasses.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Delegate Name="AutomationScript.Engine.EnumChildProc" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_DelegatesAndEvents.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Class Name="AutomationScript.Engine.ActionMessageTranslation" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_StructsAndSupportClasses.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="AutomationScript.Engine.AutomationStep" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_StructsAndSupportClasses.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Enum Name="AutomationScript.Engine.VirtualKeyCode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_ExternAndMembers.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="AutomationScript.Engine.ConditionType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_ExternAndMembers.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Class Name="AutomationScript.Engine.Condition" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Engine\AutomationScriptEngine_StructsAndSupportClasses.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>zMKgGCBAJShnqEAjKqA4hAoIBATGsDDKwM5QADWCQKw=</HashCode>
+      <FileName>Engine\AutomationScriptEngine_CtorsAndFinalizers.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AutomationScript.Properties.Resources" Collapsed="true">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AutomationScript.Properties.Settings" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

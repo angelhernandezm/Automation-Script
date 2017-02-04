@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- File: Demo1.xml -->
+<!-- Created on: June 3rd, 2010 -->
+<!-- Created by: Angel J. Hernández M -->
+<!-- Description: AutomationScript for Demo application -->
+
+<autoscript version="1.0">
+	<!-- Report Header -->
+	<step  Msg="770" wParam="0" lParam="0" targetClass="Edit" clipBoardData="This file has been automatic generated @ {0}"/>
+	<step targetClass="Edit" stepAction="KeyStroke" virtualKeyCode="VK_ENTER"/>
+	<step  Msg="770" wParam="0" lParam="0" targetClass="Edit" clipBoardData="**************************************"/>
+	<step targetClass="Edit" >
+		<preRequisites>
+			<for stepCount="2" stepAction="KeyStroke" virtualKeyCode="VK_ENTER"/>
+		</preRequisites>
+	</step>
+	<step  Msg="770" wParam="0" lParam="0" targetClass="Edit" clipBoardData="**************************************"/>
+	<step  Msg="770" wParam="0" lParam="0" targetClass="Edit" clipBoardData="Your current system configuration is" />
+	<step targetClass="Edit" stepAction="KeyStroke" virtualKeyCode="VK_ENTER"/>
+	<step  Msg="770" wParam="0" lParam="0" targetClass="Edit" clipBoardData="**************************************"/>
+	<step targetClass="Edit">
+		<preRequisites>
+			<for stepCount="3" stepAction="KeyStroke" virtualKeyCode="VK_ENTER"/>
+		</preRequisites>
+	</step>
+
+	<!-- Insert content from another file -->
+	<step  Msg="770" wParam="0" lParam="0" targetClass="Edit" clipBoardData="{1}"/>
+
+	<!-- Select Save (File Menu)-->
+	<step  Msg="260" wParam="18" lParam="540540929" targetClass="Edit"/>
+	<step  Msg="260" wParam="70" lParam="539033601" targetClass="Edit"/>
+	<step  Msg="262" wParam="102" lParam="539033601" targetClass="Edit"/>
+
+	<!-- Save file -->
+	<step  Msg="273" wParam="65539" delay="1000" lParam="0"/>
+	<step  Msg="770" wParam="0" lParam="0" delay="1000" pathOrTitle="Save As" clipBoardData="{2}" exitAutomationOnFailure="true">
+		<preRequisites>
+			<condition type="Dialog" behavior="Show" retries="3" timeInterval="1500" />
+		</preRequisites>
+	</step>
+	<step  Msg="513" wParam="1" lParam="589840" pathOrTitle="Save As" childElement="Save" />
+	<step  Msg="514" wParam="0" lParam="589840" delay="2000" pathOrTitle="Save As" childElement="Save" />
+
+	<!-- Close notepad-->
+	<step  Msg="16" wParam="0" lParam="0" delay="1500" >
+		<preRequisites>
+			<condition type="Dialog" behavior="Dismiss" retries="3" timeInterval="1500" />
+		</preRequisites>
+	</step>
+</autoscript>

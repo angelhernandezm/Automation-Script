@@ -1,0 +1,51 @@
+﻿        private void button3_Click(object sender, EventArgs e)
+        {
+
+            XDocument xml = null;
+            OpenFileDialog open = new OpenFileDialog();
+
+            if (open.ShowDialog().Equals(DialogResult.OK) && !string.IsNullOrEmpty(open.FileName))
+            {
+
+                using (TextReader reader = File.OpenText(open.FileName))
+                    xml = XDocument.Load(reader);
+
+                using (AutomationFactory auto = AutomationFactory.GetInstance())
+                {
+                    auto.Tag = "Angel was here";
+                    auto.Disposed += new EventHandler(auto_Disposed);
+                    auto.OnAutomationExecuted += new AutomationFactory.GenericDelegate<uint, IntPtr>(auto_OnAutomationExecuted);
+                    auto.OnAutomationFailed += new AutomationFactory.GenericDelegate<AutomationFactory.AutomationStep, Exception>(auto_OnAutomationFailed);
+                    auto.OnMessageSentCompleted += new AutomationFactory.GenericDelegate<IntPtr, int>(auto_OnMessageSentCompleted);
+                    auto.RunAutomationScript(xml, IntPtr.Zero, AutomationEndCode);
+                }
+            }
+
+        }
+
+        private void AutomationEndCode(IntPtr hWnd, object args)
+        {
+            // Implementation goes here -- Executed at the end of the automation
+
+            MessageBox.Show(args.ToString());
+        }
+
+        void auto_OnMessageSentCompleted(IntPtr t, int v)
+        {
+           // MessageBox.Show("Message Completed!");
+        }
+
+        void auto_OnAutomationFailed(AutomationFactory.AutomationStep t, Exception v)
+        {
+          //  MessageBox.Show(string.Format("Automation failed due to: {0}", v.Message));
+        }
+
+        void auto_OnAutomationExecuted(uint t, IntPtr v)
+        {
+          //  MessageBox.Show("Automation executed!");
+        }
+
+        void auto_Disposed(object sender, EventArgs e)
+        {
+           // MessageBox.Show("Automation is disposed!");
+        }
